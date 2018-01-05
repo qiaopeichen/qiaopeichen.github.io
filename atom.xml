@@ -5,9 +5,9 @@
   <subtitle>不放过每一个黑夜</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://qiaopc.xyz/"/>
   <updated>2018-01-05T14:50:36.058Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://qiaopc.xyz/</id>
   
   <author>
     <name>乔培宸</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>markdown语法说明</title>
-    <link href="http://yoursite.com/2018/01/05/markdown/"/>
-    <id>http://yoursite.com/2018/01/05/markdown/</id>
+    <link href="http://qiaopc.xyz/2018/01/05/markdown/"/>
+    <id>http://qiaopc.xyz/2018/01/05/markdown/</id>
     <published>2018-01-05T11:45:33.000Z</published>
     <updated>2018-01-05T14:50:36.058Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+      <category term="markdown" scheme="http://qiaopc.xyz/categories/markdown/"/>
     
     
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+      <category term="markdown" scheme="http://qiaopc.xyz/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>test</title>
-    <link href="http://yoursite.com/2018/01/04/test/"/>
-    <id>http://yoursite.com/2018/01/04/test/</id>
+    <link href="http://qiaopc.xyz/2018/01/04/test/"/>
+    <id>http://qiaopc.xyz/2018/01/04/test/</id>
     <published>2018-01-04T12:29:54.000Z</published>
     <updated>2018-01-05T14:54:16.345Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="http://qiaopc.xyz/categories/test/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="test" scheme="http://qiaopc.xyz/tags/test/"/>
     
   </entry>
   
   <entry>
     <title>&#39;博客测试&#39;</title>
-    <link href="http://yoursite.com/2018/01/04/boke/"/>
-    <id>http://yoursite.com/2018/01/04/boke/</id>
+    <link href="http://qiaopc.xyz/2018/01/04/boke/"/>
+    <id>http://qiaopc.xyz/2018/01/04/boke/</id>
     <published>2018-01-03T16:48:58.000Z</published>
     <updated>2018-01-05T12:04:51.671Z</updated>
     
@@ -85,7 +85,7 @@
     </summary>
     
     
-      <category term="标签测试" scheme="http://yoursite.com/tags/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/"/>
+      <category term="标签测试" scheme="http://qiaopc.xyz/tags/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
