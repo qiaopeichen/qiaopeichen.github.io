@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-05T13:06:31.403Z</updated>
+  <updated>2018-01-05T13:34:28.824Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2018/01/05/test/"/>
-    <id>http://yoursite.com/2018/01/05/test/</id>
-    <published>2018-01-05T13:06:31.000Z</published>
-    <updated>2018-01-05T13:06:31.403Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>markdown语法说明</title>
-    <link href="http://yoursite.com/2018/01/05/jojo/"/>
-    <id>http://yoursite.com/2018/01/05/jojo/</id>
+    <link href="http://yoursite.com/2018/01/05/markdown/"/>
+    <id>http://yoursite.com/2018/01/05/markdown/</id>
     <published>2018-01-05T11:45:33.000Z</published>
     <updated>2018-01-05T13:34:28.824Z</updated>
     
