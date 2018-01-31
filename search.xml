@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【AndroidStudio】创建objectAnimator]]></title>
+    <url>%2F2018%2F01%2F31%2F%E3%80%90AndroidStudio%E3%80%91%E5%88%9B%E5%BB%BAobjectAnimator%2F</url>
+    <content type="text"><![CDATA[今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。 但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。解决过程：1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示) 4.创建成功个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）]]></content>
+      <categories>
+        <category>androidStudio</category>
+      </categories>
+      <tags>
+        <tag>androidStudio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[【Hexo】写出hexo第一篇博文]]></title>
     <url>%2F2018%2F01%2F31%2Fhexo%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87%2F</url>
     <content type="text"><![CDATA[今天决定写出我的hexo第一篇博文，之前搭建了这个博客就没时间打理了，现在腾出时间来试试写一些东西，练一练文笔。 首先先回忆一下如何创建出第一篇博文，打开node.js command prompt 这个命令行，之前我图方便，直接把它固定在任务栏里了。 回忆一下部署hexo常用的几个命令： cd d:/blog hexo clean //清除hexo缓存 hexo g // generate 生成hexo hexo d // deploy 部署hexo到服务器 hexo server // 开启hexo本地服务器，可以在浏览器通过localhost:4000来本地浏览并修改 现在我要写一篇博客，第一步就是要生成博客文件： d:\blog&gt;hexo new post hexo第一篇博文 INFO Created: d:\blog\source\_posts\2018-01-31-hexo第一篇博文.md 现在已经通过 hexo new post + 博文名 创建出了博客文件，文件在 D:\blog\source_posts 目录下。然后我们打开 2018-01-31-hexo第一篇博文.md ， 现在就可以写作了。至于该博文的标题、日期、标签、分类等属性，我们需要在文件的最开始定义好： --- title: 写出hexo第一篇博文 date: 2018-01-31 21:57:39 tags: hexo categories: hexo --- 然后在下面写我们想要写的文字就可以了。 写完文章，保存之后，在 node.js command prompt 的命令行里生成hexo，并部署到服务器上。 hexo generate -d // 该命令同等于 hexo g + hexo d 当出现如下反馈时，就是部署成功了。 create mode 100644 2018/01/31/hexo第一篇博文/index.html Branch &apos;master&apos; set up to track remote branch &apos;master&apos; from &apos;https://github.com/qiaopeichen/qiaopeichen.github.io.git&apos;. To https://github.com/qiaopeichen/qiaopeichen.github.io.git b6e0a83..c0c2a67 HEAD -&gt; master INFO Deploy done: git 刷新一下qiaopc.xyz，现在这篇博客就出现了。]]></content>

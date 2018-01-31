@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-01-31T14:22:46.822Z</updated>
+  <updated>2018-01-31T15:30:01.698Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【AndroidStudio】创建objectAnimator</title>
+    <link href="http://qiaopc.xyz/2018/01/31/%E3%80%90AndroidStudio%E3%80%91%E5%88%9B%E5%BB%BAobjectAnimator/"/>
+    <id>http://qiaopc.xyz/2018/01/31/【AndroidStudio】创建objectAnimator/</id>
+    <published>2018-01-31T15:18:21.000Z</published>
+    <updated>2018-01-31T15:30:01.698Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。"><a href="#今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。" class="headerlink" title="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。"></a>今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。</h2><p>起因：<br>书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。</p><h2 id="但是自己在-AndroidStudio-中写-demo-并没有-objectAnimator-的提示，而且在书中的源代码里，objectAnimator-也爆红（可以运行）。"><a href="#但是自己在-AndroidStudio-中写-demo-并没有-objectAnimator-的提示，而且在书中的源代码里，objectAnimator-也爆红（可以运行）。" class="headerlink" title="但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。"></a>但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。</h2><p>解决过程：<br>1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹<br>2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)<br>3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示)</p><h2 id="4-创建成功"><a href="#4-创建成功" class="headerlink" title="4.创建成功"></a>4.创建成功</h2><p>个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。<br>（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。&quot;&gt;&lt;a href=&quot;#今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。&quot; class=&quot;headerlin
+      
+    
+    </summary>
+    
+      <category term="androidStudio" scheme="http://qiaopc.xyz/categories/androidStudio/"/>
+    
+    
+      <category term="androidStudio" scheme="http://qiaopc.xyz/tags/androidStudio/"/>
+    
+  </entry>
   
   <entry>
     <title>【Hexo】写出hexo第一篇博文</title>
