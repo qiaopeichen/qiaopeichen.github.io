@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【AndroidStudio】创建objectAnimator]]></title>
     <url>%2F2018%2F01%2F31%2F%E3%80%90AndroidStudio%E3%80%91%E5%88%9B%E5%BB%BAobjectAnimator%2F</url>
-    <content type="text"><![CDATA[今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。 但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。解决过程：1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示) 4.创建成功个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）]]></content>
+    <content type="text"><![CDATA[今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。 起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。 解决过程：1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示)4.创建成功 个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）]]></content>
       <categories>
         <category>androidStudio</category>
       </categories>

@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。 但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
+<meta name="description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。 起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
 <meta name="keywords" content="androidStudio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【AndroidStudio】创建objectAnimator">
 <meta property="og:url" content="http://qiaopc.xyz/2018/01/31/【AndroidStudio】创建objectAnimator/index.html">
 <meta property="og:site_name" content="乔培宸的个人博客">
-<meta property="og:description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。 但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
+<meta property="og:description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。 起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-31T15:30:01.698Z">
+<meta property="og:updated_time" content="2018-01-31T15:57:32.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【AndroidStudio】创建objectAnimator">
-<meta name="twitter:description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。 但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
+<meta name="twitter:description" content="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。 起因：书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的">
 
 
 
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-31T23:30:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-31T23:57:32+08:00">
                 2018-01-31
               </time>
             
@@ -478,9 +478,10 @@
       
 
       
-        <h2 id="今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。"><a href="#今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。" class="headerlink" title="今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。"></a>今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。</h2><p>起因：<br>书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。</p>
-<h2 id="但是自己在-AndroidStudio-中写-demo-并没有-objectAnimator-的提示，而且在书中的源代码里，objectAnimator-也爆红（可以运行）。"><a href="#但是自己在-AndroidStudio-中写-demo-并没有-objectAnimator-的提示，而且在书中的源代码里，objectAnimator-也爆红（可以运行）。" class="headerlink" title="但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。"></a>但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。</h2><p>解决过程：<br>1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹<br>2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)<br>3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示)</p>
-<h2 id="4-创建成功"><a href="#4-创建成功" class="headerlink" title="4.创建成功"></a>4.创建成功</h2><p>个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。<br>（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）</p>
+        <p>今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。</p>
+<h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p>书中在 AndroidStudio 中的 res 目录下创建了 anim 文件夹，并创建了 anim_path1.xml，文件里写的是 objectAnimator 这个标签。<br>但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。</p>
+<h2 id="解决过程："><a href="#解决过程：" class="headerlink" title="解决过程："></a>解决过程：</h2><p>1.在 AndroidStudio 中的 res 目录下创建 animator 文件夹<br>2.右键该animator文件夹-&gt;new-&gt;Animator resource file(会在菜单项里自动出现提示)<br>3.根据弹框提示输入 File name 和 Root element，分别是 anim_path1 和 objectAnimator(这时会有自动提示)<br>4.创建成功</p>
+<p>个人怀疑是 AndroidStudio 升级新版本的原因，以后 res 目录下新建的 anim 要改名为 animator 了。<br>（vector标签的xml文件也如法炮制，直接在drawable文件夹下 new-&gt;Vector Asset 即可。）</p>
 
       
     </div>
@@ -752,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#今天在看-Android群英传第7章-Android动画机制与绘图技巧-180页-的时候，遇到了问题。"><span class="nav-number">1.</span> <span class="nav-text">今天在看 Android群英传第7章-Android动画机制与绘图技巧-180页 的时候，遇到了问题。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#但是自己在-AndroidStudio-中写-demo-并没有-objectAnimator-的提示，而且在书中的源代码里，objectAnimator-也爆红（可以运行）。"><span class="nav-number">2.</span> <span class="nav-text">但是自己在 AndroidStudio 中写 demo 并没有 objectAnimator 的提示，而且在书中的源代码里，objectAnimator 也爆红（可以运行）。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-创建成功"><span class="nav-number">3.</span> <span class="nav-text">4.创建成功</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因："><span class="nav-number">1.</span> <span class="nav-text">起因：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决过程："><span class="nav-number">2.</span> <span class="nav-text">解决过程：</span></a></li></ol></div>
             
 
           </div>
