@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-01-31T13:57:39.312Z</updated>
+  <updated>2018-01-31T14:17:05.689Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -17,16 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo第一篇博文</title>
+    <title>写出hexo第一篇博文</title>
     <link href="http://qiaopc.xyz/2018/01/31/hexo%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/"/>
     <id>http://qiaopc.xyz/2018/01/31/hexo第一篇博文/</id>
     <published>2018-01-31T13:57:39.000Z</published>
-    <updated>2018-01-31T13:57:39.312Z</updated>
+    <updated>2018-01-31T14:17:05.689Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天决定写出我的hexo第一篇博文，之前搭建了这个博客就没时间打理了，现在腾出时间来试试写一些东西，练一练文笔。</p><p>首先先回忆一下如何创建出第一篇博文，<br>打开node.js command prompt 这个命令行，之前我图方便，直接把它固定在任务栏里了。</p><p>回忆一下部署hexo常用的几个命令：</p><pre><code>cd d:/bloghexo clean  //清除hexo缓存hexo g // generate 生成hexohexo d // deploy 部署hexo到服务器hexo server // 开启hexo本地服务器，可以在浏览器通过localhost:4000来本地浏览并修改</code></pre><hr><p>现在我要写一篇博客，第一步就是要生成博客文件：</p><pre><code>d:\blog&gt;hexo new post hexo第一篇博文INFO  Created: d:\blog\source\_posts\2018-01-31-hexo第一篇博文.md</code></pre><p>现在已经通过 hexo new post + 博文名 创建出了博客文件，文件在 D:\blog\source_posts 目录下。<br>然后我们打开 2018-01-31-hexo第一篇博文.md ， 现在就可以写作了。<br>至于该博文的标题、日期、标签、分类等属性，我们需要在文件的最开始定义好：</p><pre><code>---title: 写出hexo第一篇博文date: 2018-01-31 21:57:39tags: hexocategories: hexo---</code></pre><p>然后在下面写我们想要写的文字就可以了。</p><hr><p>写完文章，保存之后，在 node.js command prompt 的命令行里生成hexo，并部署到服务器上。</p><p>刷新一下qiaopc.xyz，现在这篇博客就出现了。</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;今天决定写出我的hexo第一篇博文，之前搭建了这个博客就没时间打理了，现在腾出时间来试试写一些东西，练一练文笔。&lt;/p&gt;
+&lt;p&gt;首先先回忆一下如何创建出第一篇博文，&lt;br&gt;打开node.js command prompt 这个命令行，之前我图方便，直接把它固定在任务栏里了。
+      
+    
     </summary>
     
+      <category term="hexo" scheme="http://qiaopc.xyz/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://qiaopc.xyz/tags/hexo/"/>
     
   </entry>
   
