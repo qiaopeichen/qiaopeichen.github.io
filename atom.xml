@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-02-05T13:15:15.172Z</updated>
+  <updated>2018-02-05T13:19:48.243Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://qiaopc.xyz/2018/02/05/%E3%80%90Hexo%E3%80%91theProblomOfGitment/"/>
     <id>http://qiaopc.xyz/2018/02/05/【Hexo】theProblomOfGitment/</id>
     <published>2018-02-05T12:49:24.000Z</published>
-    <updated>2018-02-05T13:15:15.172Z</updated>
+    <updated>2018-02-05T13:19:48.243Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h1><p>今天写博客的时候遇到了一个问题，点击初始化评论失败，弹出提示框提示Error:vertify failed。</p><h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>百度了一番，提示可能是仓库名和个人当前git登录的账号不同导致的，</p><p>但是在上个月我就已经把所有的环境都配好了，包括Gitment仓库等等，不应该提示验证失败的。</p><p>最后怀疑是hexo new post 博客文件 的问题，当博客文件为中文的时候，push到仓库里，gitment无法对当前文件初始化评论。</p><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>把本地_posts文件夹里的博客文件名全都换成了英文。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h1><p>今天写博客的时候遇到了一个问题，点击初始化评论失败，弹出提示框提示Error:vertify failed。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>百度了一番，提示可能是仓库名和个人当前git登录的账号不同导致的，</p><p>但是在上个月我就已经把所有的环境都配好了，包括Gitment仓库等等，不应该提示验证失败的。</p><p>最后怀疑是hexo new post 博客文件 的问题，当博客文件为中文的时候，push到仓库里，gitment无法对当前文件初始化评论。</p><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><p>把本地_posts文件夹里的博客文件名全都换成了英文。</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h1 id=&quot;起因：&quot;&gt;&lt;a href=&quot;#起因：&quot; class=&quot;headerlink&quot; title=&quot;起因：&quot;&gt;&lt;/a&gt;起因：&lt;/h1&gt;&lt;p&gt;今天写博客的时候遇到了一个问题，点击初始化评论失败，弹出提示框提示Error:vertify failed。&lt;/p&gt;
-&lt;h2 id=
+&lt;h1 id=
       
     
     </summary>
