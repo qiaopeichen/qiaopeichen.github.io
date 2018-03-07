@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-02-05T13:25:47.123Z</updated>
+  <updated>2018-03-07T07:25:48.629Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【AndroidStudio】import包类名突然爆红</title>
+    <link href="http://qiaopc.xyz/2018/03/07/ImportPackageFailedAndTurnedRed/"/>
+    <id>http://qiaopc.xyz/2018/03/07/ImportPackageFailedAndTurnedRed/</id>
+    <published>2018-03-07T07:17:50.000Z</published>
+    <updated>2018-03-07T07:25:48.629Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p>今天在公司重构ConfigSharePreference时，将该文件字段拆分成UserSettingsPreference和ServerSettingsPreference两个文件，然后在锁屏升级新版本的时候，将旧字段复制到新的文件里，以后的读取就都在新的文件里进行。<br>在昨天已经将UserSettingsPreference拆分完并且自测成功，<br>但是今天在写ServerSettingsPreference的时候发现昨天的UserSettingsPreference爆红。<br>代码并没有被改动，其他的例如包位置和类名权限public声明都是正常状态。</p><h2 id="解决过程："><a href="#解决过程：" class="headerlink" title="解决过程："></a>解决过程：</h2><p>在重启AS无效后，<br>点击AS左上角 File -&gt; Invalidate Caches / Restart 清除AS缓存并重启。<br>重新打开AS后，发现爆红消失了。</p><h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>我觉得可能是AS的bug。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;起因：&quot;&gt;&lt;a href=&quot;#起因：&quot; class=&quot;headerlink&quot; title=&quot;起因：&quot;&gt;&lt;/a&gt;起因：&lt;/h2&gt;&lt;p&gt;今天在公司重构ConfigSharePreference时，将该文件字段拆分成UserSettingsPreference和Serv
+      
+    
+    </summary>
+    
+      <category term="androidStudio" scheme="http://qiaopc.xyz/categories/androidStudio/"/>
+    
+    
+      <category term="androidStudio" scheme="http://qiaopc.xyz/tags/androidStudio/"/>
+    
+  </entry>
   
   <entry>
     <title>【Hexo】gitment初始化本页评论提示Error:vertify failed</title>
