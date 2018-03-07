@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： /该段为网上copy的代码，报的错都是一样的/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal:">
+<meta name="description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： 1234/**该段为网上copy的代码，报的错都是一样的*/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Hexo】使用hexo deploy 失败报错">
 <meta property="og:url" content="http://qiaopc.xyz/2018/03/07/Hexo-hexoDeployFailed/index.html">
 <meta property="og:site_name" content="乔培宸的个人博客">
-<meta property="og:description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： /该段为网上copy的代码，报的错都是一样的/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal:">
+<meta property="og:description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： 1234/**该段为网上copy的代码，报的错都是一样的*/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T08:39:45.198Z">
+<meta property="og:updated_time" content="2018-03-07T08:45:21.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Hexo】使用hexo deploy 失败报错">
-<meta name="twitter:description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： /该段为网上copy的代码，报的错都是一样的/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal:">
+<meta name="twitter:description" content="起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： 1234/**该段为网上copy的代码，报的错都是一样的*/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)">
 
 
 
@@ -365,7 +365,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-07T16:39:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-07T16:45:21+08:00">
                 2018-03-07
               </time>
             
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  219 字
+                  223 字
                 </span>
               
 
@@ -457,7 +457,7 @@
 
       
         <h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p>放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。<br>然后今天写hexo的时候，用hexo generate -d 命令报错：</p>
-<p>/<strong>该段为网上copy的代码，报的错都是一样的</strong>/<br>FATAL bash: /dev/tty: No such device or address<br>error: failed to execute prompt script (exit code 1)<br>fatal: could not read Username for ‘How people build software · GitHub’: Invalid argument</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/**该段为网上copy的代码，报的错都是一样的*/</span><br><span class="line">FATAL bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for &apos;How people build software · GitHub&apos;: Invalid argument</span><br></pre></td></tr></table></figure>
 <h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>我又重新将命令分开, hexo generate 没问题，但是hexo deploy出问题了。<br>分析是部署到服务器上失败了。<br>报错说读不了我的Username，但是我觉的我的Username还很健康 :-)<br>百度一下有人说是公司把网屏蔽了。[#blackman???]</p>
 <h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>在blog文件夹下的_config.yml文件中，<br>找到<br>Deployment：<br>    deploy:<br>    type: git<br>    repo: <a href="https://github.com/yourname/yourname.github.io.git" target="_blank" rel="noopener">https://github.com/yourname/yourname.github.io.git</a><br>    branch: master</p>
 <p>其中 repo的地址修改为<br>git@github.com:yourname/yourname.github.io.git</p>
