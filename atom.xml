@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-03-07T07:25:48.629Z</updated>
+  <updated>2018-03-07T08:37:57.341Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【Hexo】使用hexo deploy 失败报错</title>
+    <link href="http://qiaopc.xyz/2018/03/07/Hexo-hexoDeployFailed/"/>
+    <id>http://qiaopc.xyz/2018/03/07/Hexo-hexoDeployFailed/</id>
+    <published>2018-03-07T08:25:19.000Z</published>
+    <updated>2018-03-07T08:37:57.341Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p>放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。<br>然后今天写hexo的时候，用hexo generate -d 命令报错：</p><p>/<em>*该段为网上copy的代码，报的错都是一样的</em>/<br>FATAL bash: /dev/tty: No such device or address<br>error: failed to execute prompt script (exit code 1)<br>fatal: could not read Username for ‘How people build software · GitHub’: Invalid argument</p><h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>我又重新将命令分开, hexo generate 没问题，但是hexo deploy出问题了。<br>分析是部署到服务器上失败了。<br>报错说读不了我的Username，但是我觉的我的Username还很健康 :-)<br>百度一下有人说是公司把网屏蔽了。[#blackman???]</p><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>在blog文件夹下的_config.yml文件中，<br>找到<br>Deployment：<br>    deploy:<br>    type: git<br>    repo: <a href="https://github.com/yourname/yourname.github.io.git" target="_blank" rel="noopener">https://github.com/yourname/yourname.github.io.git</a><br>    branch: master</p><p>其中 repo的地址修改为<br>git@github.com:yourname/yourname.github.io.git</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;起因：&quot;&gt;&lt;a href=&quot;#起因：&quot; class=&quot;headerlink&quot; title=&quot;起因：&quot;&gt;&lt;/a&gt;起因：&lt;/h2&gt;&lt;p&gt;放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。&lt;br&gt;然后今天写hexo的时候，用hexo generate -d 
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://qiaopc.xyz/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【AndroidStudio】import包类名突然爆红</title>
-    <link href="http://qiaopc.xyz/2018/03/07/ImportPackageFailedAndTurnedRed/"/>
-    <id>http://qiaopc.xyz/2018/03/07/ImportPackageFailedAndTurnedRed/</id>
+    <link href="http://qiaopc.xyz/2018/03/07/AndroidStudio-importPackageFailedAndTurnedRed/"/>
+    <id>http://qiaopc.xyz/2018/03/07/AndroidStudio-importPackageFailedAndTurnedRed/</id>
     <published>2018-03-07T07:17:50.000Z</published>
     <updated>2018-03-07T07:25:48.629Z</updated>
     
