@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[【Hexo】使用hexo deploy 失败报错]]></title>
     <url>%2F2018%2F03%2F07%2FHexo-hexoDeployFailed%2F</url>
-    <content type="text"><![CDATA[起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： /*该段为网上copy的代码，报的错都是一样的/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for ‘How people build software · GitHub’: Invalid argument 分析：我又重新将命令分开, hexo generate 没问题，但是hexo deploy出问题了。分析是部署到服务器上失败了。报错说读不了我的Username，但是我觉的我的Username还很健康 :-)百度一下有人说是公司把网屏蔽了。[#blackman???] 解决方案：在blog文件夹下的_config.yml文件中，找到Deployment： deploy: type: git repo: https://github.com/yourname/yourname.github.io.git branch: master 其中 repo的地址修改为git@github.com:yourname/yourname.github.io.git]]></content>
+    <content type="text"><![CDATA[起因：放假把固态硬盘拆下来回家用，年后上班再把固态放回公司的电脑里。然后今天写hexo的时候，用hexo generate -d 命令报错： /该段为网上copy的代码，报的错都是一样的/FATAL bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for ‘How people build software · GitHub’: Invalid argument 分析：我又重新将命令分开, hexo generate 没问题，但是hexo deploy出问题了。分析是部署到服务器上失败了。报错说读不了我的Username，但是我觉的我的Username还很健康 :-)百度一下有人说是公司把网屏蔽了。[#blackman???] 解决方案：在blog文件夹下的_config.yml文件中，找到Deployment： deploy: type: git repo: https://github.com/yourname/yourname.github.io.git branch: master 其中 repo的地址修改为git@github.com:yourname/yourname.github.io.git]]></content>
       <tags>
         <tag>hexo</tag>
       </tags>
