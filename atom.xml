@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-03-17T10:07:33.162Z</updated>
+  <updated>2018-03-17T10:18:01.089Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -17,37 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Android-事件拦截机制细节</title>
+    <title>【Android】事件拦截机制细节</title>
     <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEvent/"/>
     <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEvent/</id>
     <published>2018-03-17T09:42:01.000Z</published>
-    <updated>2018-03-17T10:07:33.162Z</updated>
-    
-    <content type="html"><![CDATA[<hr><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。</p><hr><h2 id="事件拦截机制"><a href="#事件拦截机制" class="headerlink" title="事件拦截机制"></a>事件拦截机制</h2><p>Android的ViewGroup中有3个方法：</p><ol><li>dispatchTouchEvent()</li><li>onInterceptTouchEvent()</li><li>onTouchEvent()</li></ol><p>在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的：</p><ul><li>ViewGroupA</li><li>ViewGroupB</li><li>ViewC</li></ul><p>当我们在屏幕上点击这个ViewC的时候，事件的传递过程是：</p><ol><li>ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li></ol><p>View先走分发事件，然后决定是否拦截事件。<br>当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。</p><ol><li>ViewC-&gt;onTouchEvent</li><li>ViewGroupB-&gt;onTouchEvent</li><li>ViewGroupA-&gt;onTouchEvent</li></ol><hr><h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><p>以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。</p><p>如果返回true，则将该事件拦截。<br>如果返回false，则将该事件继续传递下去。</p><hr><h2 id="心得总结"><a href="#心得总结" class="headerlink" title="心得总结"></a>心得总结</h2><p>第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。</p><p>现在领悟到，如果不深思考一层，还会接着忘。</p><p>从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深
-      
-    
-    </summary>
-    
-      <category term="android" scheme="http://qiaopc.xyz/categories/android/"/>
-    
-    
-      <category term="android" scheme="http://qiaopc.xyz/tags/android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Android】事件拦截机制细节</title>
-    <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/"/>
-    <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</id>
-    <published>2018-03-17T09:42:01.000Z</published>
-    <updated>2018-03-17T10:12:43.034Z</updated>
+    <updated>2018-03-17T10:18:01.089Z</updated>
     
     <content type="html"><![CDATA[<hr><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。</p><hr><h2 id="事件拦截机制"><a href="#事件拦截机制" class="headerlink" title="事件拦截机制"></a>事件拦截机制</h2><p>Android的ViewGroup中有3个方法：</p><ol><li>dispatchTouchEvent()</li><li>onInterceptTouchEvent()</li><li>onTouchEvent()</li></ol><p>在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的：</p><ul><li>ViewGroupA</li><li>ViewGroupB</li><li>ViewC</li></ul><p>当我们在屏幕上点击这个ViewC的时候，事件的传递过程是：</p><ol><li>ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li></ol><p>View先走分发事件，然后决定是否拦截事件。<br>当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。</p><ol><li>ViewC-&gt;onTouchEvent</li><li>ViewGroupB-&gt;onTouchEvent</li><li>ViewGroupA-&gt;onTouchEvent</li></ol><hr><h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><p>以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。</p><p>如果返回true，则将该事件拦截。<br>如果返回false，则将该事件继续传递下去。</p><hr><h2 id="心得总结"><a href="#心得总结" class="headerlink" title="心得总结"></a>心得总结</h2><p>第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。</p><p>现在领悟到，如果不深思考一层，还会接着忘。</p><p>从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。</p>]]></content>
     

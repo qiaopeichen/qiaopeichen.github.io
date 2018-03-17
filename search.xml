@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Android-事件拦截机制细节]]></title>
-    <url>%2F2018%2F03%2F17%2FAndroid-dispatchTouchEvent%2F</url>
-    <content type="text"><![CDATA[起因今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。 事件拦截机制Android的ViewGroup中有3个方法： dispatchTouchEvent() onInterceptTouchEvent() onTouchEvent() 在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的： ViewGroupA ViewGroupB ViewC 当我们在屏幕上点击这个ViewC的时候，事件的传递过程是： ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent View先走分发事件，然后决定是否拦截事件。当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。 ViewC-&gt;onTouchEvent ViewGroupB-&gt;onTouchEvent ViewGroupA-&gt;onTouchEvent 细节以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。 如果返回true，则将该事件拦截。如果返回false，则将该事件继续传递下去。 心得总结第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。 现在领悟到，如果不深思考一层，还会接着忘。 从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。]]></content>
-      <categories>
-        <category>android</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[【Android】事件拦截机制细节]]></title>
-    <url>%2F2018%2F03%2F17%2FAndroid-dispatchTouchEventAndonTouchEvent%2F</url>
+    <url>%2F2018%2F03%2F17%2FAndroid-dispatchTouchEvent%2F</url>
     <content type="text"><![CDATA[起因今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。 事件拦截机制Android的ViewGroup中有3个方法： dispatchTouchEvent() onInterceptTouchEvent() onTouchEvent() 在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的： ViewGroupA ViewGroupB ViewC 当我们在屏幕上点击这个ViewC的时候，事件的传递过程是： ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent View先走分发事件，然后决定是否拦截事件。当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。 ViewC-&gt;onTouchEvent ViewGroupB-&gt;onTouchEvent ViewGroupA-&gt;onTouchEvent 细节以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。 如果返回true，则将该事件拦截。如果返回false，则将该事件继续传递下去。 心得总结第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。 现在领悟到，如果不深思考一层，还会接着忘。 从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。]]></content>
       <categories>
         <category>android</category>
