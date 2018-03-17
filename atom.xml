@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-03-07T08:45:21.766Z</updated>
+  <updated>2018-03-17T09:42:01.340Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android-dispatchTouchEventAndonTouchEvent</title>
+    <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/"/>
+    <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</id>
+    <published>2018-03-17T09:42:01.000Z</published>
+    <updated>2018-03-17T09:42:01.340Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>【Hexo】使用hexo deploy 失败报错</title>
