@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="android," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="挥挥本子写写代码">
+<meta name="description" content="起因今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。  事件拦截机制Android的ViewGroup中有3个方法：  dispatchTouchEvent() onInterceptTouchEvent()">
+<meta name="keywords" content="android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android-dispatchTouchEventAndonTouchEvent">
+<meta property="og:title" content="Android-事件拦截机制细节">
 <meta property="og:url" content="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/index.html">
 <meta property="og:site_name" content="乔培宸的个人博客">
-<meta property="og:description" content="挥挥本子写写代码">
+<meta property="og:description" content="起因今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。  事件拦截机制Android的ViewGroup中有3个方法：  dispatchTouchEvent() onInterceptTouchEvent()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-17T09:42:01.340Z">
+<meta property="og:updated_time" content="2018-03-17T10:07:33.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android-dispatchTouchEventAndonTouchEvent">
-<meta name="twitter:description" content="挥挥本子写写代码">
+<meta name="twitter:title" content="Android-事件拦截机制细节">
+<meta name="twitter:description" content="起因今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。  事件拦截机制Android的ViewGroup中有3个方法：  dispatchTouchEvent() onInterceptTouchEvent()">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title>Android-dispatchTouchEventAndonTouchEvent | 乔培宸的个人博客</title>
+  <title>Android-事件拦截机制细节 | 乔培宸的个人博客</title>
   
 
 
@@ -336,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Android-dispatchTouchEventAndonTouchEvent</h1>
+          <h1 class="post-title" itemprop="name headline">Android-事件拦截机制细节</h1>
         
 
         <div class="post-meta">
@@ -364,12 +365,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T17:42:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-17T18:07:33+08:00">
                 2018-03-17
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -388,7 +411,7 @@
 
           
           
-             <span id="/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/" class="leancloud_visitors" data-flag-title="Android-dispatchTouchEventAndonTouchEvent">
+             <span id="/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/" class="leancloud_visitors" data-flag-title="Android-事件拦截机制细节">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,7 +441,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  489 字
                 </span>
               
 
@@ -434,7 +457,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -455,7 +478,41 @@
       
 
       
-        
+        <hr>
+<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。</p>
+<hr>
+<h2 id="事件拦截机制"><a href="#事件拦截机制" class="headerlink" title="事件拦截机制"></a>事件拦截机制</h2><p>Android的ViewGroup中有3个方法：</p>
+<ol>
+<li>dispatchTouchEvent()</li>
+<li>onInterceptTouchEvent()</li>
+<li>onTouchEvent()</li>
+</ol>
+<p>在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的：</p>
+<ul>
+<li>ViewGroupA</li>
+<li>ViewGroupB</li>
+<li>ViewC</li>
+</ul>
+<p>当我们在屏幕上点击这个ViewC的时候，事件的传递过程是：</p>
+<ol>
+<li>ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li>
+<li>ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li>
+<li>ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li>
+</ol>
+<p>View先走分发事件，然后决定是否拦截事件。<br>当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。</p>
+<ol>
+<li>ViewC-&gt;onTouchEvent</li>
+<li>ViewGroupB-&gt;onTouchEvent</li>
+<li>ViewGroupA-&gt;onTouchEvent</li>
+</ol>
+<hr>
+<h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><p>以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。</p>
+<p>如果返回true，则将该事件拦截。<br>如果返回false，则将该事件继续传递下去。</p>
+<hr>
+<h2 id="心得总结"><a href="#心得总结" class="headerlink" title="心得总结"></a>心得总结</h2><p>第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。</p>
+<p>现在领悟到，如果不深思考一层，还会接着忘。</p>
+<p>从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。</p>
+
       
     </div>
     
@@ -504,7 +561,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/" title="Android-dispatchTouchEventAndonTouchEvent">http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</a>
+    <a href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/" title="Android-事件拦截机制细节">http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -516,6 +573,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/android/" rel="tag"><i class="fa fa-tag"></i> android</a>
+          
+        </div>
       
 
       
@@ -593,8 +656,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -702,6 +774,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件拦截机制"><span class="nav-number">2.</span> <span class="nav-text">事件拦截机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#细节"><span class="nav-number">3.</span> <span class="nav-text">细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#心得总结"><span class="nav-number">4.</span> <span class="nav-text">心得总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -733,7 +821,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.6k</span>
+    <span title="Site words total count">5.1k</span>
   
 </div>
 
