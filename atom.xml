@@ -43,6 +43,32 @@
   </entry>
   
   <entry>
+    <title>【Android】事件拦截机制细节</title>
+    <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/"/>
+    <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</id>
+    <published>2018-03-17T09:42:01.000Z</published>
+    <updated>2018-03-17T10:12:43.034Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深刻的理解，所以也就没有更深的印象。对一些细节问题，即便再一次看书记下来，如果不了解为什么，也还是重蹈覆辙。</p><hr><h2 id="事件拦截机制"><a href="#事件拦截机制" class="headerlink" title="事件拦截机制"></a>事件拦截机制</h2><p>Android的ViewGroup中有3个方法：</p><ol><li>dispatchTouchEvent()</li><li>onInterceptTouchEvent()</li><li>onTouchEvent()</li></ol><p>在一个ViewGroup中，假设ViewGroupA嵌套ViewGroupB,ViewGroupB中又包含ViewC。那么整个ViewGroup树是这样的：</p><ul><li>ViewGroupA</li><li>ViewGroupB</li><li>ViewC</li></ul><p>当我们在屏幕上点击这个ViewC的时候，事件的传递过程是：</p><ol><li>ViewGroupA-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewGroupB-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li><li>ViewC-&gt;dispatchTouchEvent-&gt;onInterceptTouchEvent</li></ol><p>View先走分发事件，然后决定是否拦截事件。<br>当事件传递到最后一个View的时候（也可以是某个View将事件拦截了下来），开始执行onTouchEvent处理事件。</p><ol><li>ViewC-&gt;onTouchEvent</li><li>ViewGroupB-&gt;onTouchEvent</li><li>ViewGroupA-&gt;onTouchEvent</li></ol><hr><h2 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h2><p>以上只是简单正常调用过程，其中每个函数在执行到最后都需要返回boolean值，来决定是否将该事件传递下去。</p><p>如果返回true，则将该事件拦截。<br>如果返回false，则将该事件继续传递下去。</p><hr><h2 id="心得总结"><a href="#心得总结" class="headerlink" title="心得总结"></a>心得总结</h2><p>第一次看到返回值这一段的时候，偷懒直接把true和false的结果记了下来，没有去深思考一层为什么true要拦截，false要传递，果不其然过了一段时间就忘了。</p><p>现在领悟到，如果不深思考一层，还会接着忘。</p><p>从JAVA语法角度来看，return true 很明显是某个函数已经成功完成任务，不需要再往下走；反过来return false 就是执行未完成或执行失败的意思，自然要往另外的地方走。其实没什么难理解的。说白了还是当时自己懒。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;今天复习了一下Android的事件拦截机制，对于事件拦截一些细节有些记不清了，记不清的原因是自己当时只是单纯的记住了，但没有更加深
+      
+    
+    </summary>
+    
+      <category term="android" scheme="http://qiaopc.xyz/categories/android/"/>
+    
+    
+      <category term="android" scheme="http://qiaopc.xyz/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Hexo】使用hexo deploy 失败报错</title>
     <link href="http://qiaopc.xyz/2018/03/07/Hexo-hexoDeployFailed/"/>
     <id>http://qiaopc.xyz/2018/03/07/Hexo-hexoDeployFailed/</id>
@@ -95,9 +121,9 @@
     <link href="http://qiaopc.xyz/2018/02/05/Hexo-theProblomOfGitment/"/>
     <id>http://qiaopc.xyz/2018/02/05/Hexo-theProblomOfGitment/</id>
     <published>2018-02-05T12:49:24.000Z</published>
-    <updated>2018-02-05T13:25:47.123Z</updated>
+    <updated>2018-03-17T10:15:35.738Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h1><p>今天写博客的时候遇到了一个问题，点击初始化评论失败，弹出提示框提示Error:vertify failed。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>百度了一番，提示可能是仓库名和个人当前git登录的账号不同导致的，</p><p>但是在上个月我就已经把所有的环境都配好了，包括Gitment仓库等等，不应该提示验证失败的。</p><p>最后怀疑是hexo new post 博客文件 的问题，当博客文件为中文的时候，push到仓库里，gitment无法对当前文件初始化评论。</p><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><p>把本地_posts文件夹里的博客文件名全都换成了英文。</p><p>甚至不能有符号如【】。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h1><p>今天写博客的时候遇到了一个问题，点击初始化评论失败，弹出提示框提示Error:vertify failed。</p><h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>百度了一番，提示可能是仓库名和个人当前git登录的账号不同导致的，</p><p>但是在上个月我就已经把所有的环境都配好了，包括Gitment仓库等等，不应该提示验证失败的。</p><p>最后怀疑是hexo new post 博客文件 的问题，当博客文件为中文的时候，push到仓库里，gitment无法对当前文件初始化评论。</p><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><p>把本地_posts文件夹里的博客文件名全都换成了英文。</p><p>甚至不能有符号如【】。</p><hr><h2 id="2018-3-17更新"><a href="#2018-3-17更新" class="headerlink" title="2018-3-17更新"></a>2018-3-17更新</h2><h1 id="Error-Validation-failed"><a href="#Error-Validation-failed" class="headerlink" title="Error:Validation failed"></a>Error:Validation failed</h1><h1 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h1><p>issue的标签label有长度限制，labels的最大长度限制是50个字符。</p><h1 id="解决方案：-1"><a href="#解决方案：-1" class="headerlink" title="解决方案："></a>解决方案：</h1><p>把本地博客的文件名改短一点就好了</p>]]></content>
     
     <summary type="html">
     
