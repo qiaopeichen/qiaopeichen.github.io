@@ -18,8 +18,8 @@
   
   <entry>
     <title>Android-事件拦截机制细节</title>
-    <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/"/>
-    <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEventAndonTouchEvent/</id>
+    <link href="http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEvent/"/>
+    <id>http://qiaopc.xyz/2018/03/17/Android-dispatchTouchEvent/</id>
     <published>2018-03-17T09:42:01.000Z</published>
     <updated>2018-03-17T10:07:33.162Z</updated>
     
