@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiaopc.xyz/"/>
-  <updated>2018-03-17T10:18:01.089Z</updated>
+  <updated>2018-04-09T11:41:34.575Z</updated>
   <id>http://qiaopc.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Android】浅谈MVC、MVP、MVVM架构</title>
+    <link href="http://qiaopc.xyz/2018/04/09/Android-MVC-MVP-MVVM/"/>
+    <id>http://qiaopc.xyz/2018/04/09/Android-MVC-MVP-MVVM/</id>
+    <published>2018-04-09T11:19:18.000Z</published>
+    <updated>2018-04-09T11:41:34.575Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>MVC架构是最经典的三层架构，分别是Model层、View层、Controller层。其中每层的职责如下：<br>Model：我们针对业务模型而建立的数据结构和相关的类。Model是与View无关，与业务相关的。<br>View：和界面相关的类，可以是xml文件或自定义View。<br>Controller：控制层，通常在Activity中，用来处理View和Model之间的逻辑。</p><p>MVC的缺点：<br>1.View对Model的依赖，会导致View也包含了业务逻辑。<br>2.Controller会变得很厚很复杂。</p><hr><h2 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h2><p>MVP架构：Model-View-Presenter，MVC的演变模式，将Controller换成了Presenter，主要为了解决上述第一个缺点，将View和Model解耦，不过第二个缺点依然没有解决。</p><p>从MVC模式中，View被拆成了Presenter和View，真正实现了View和业务逻辑的分离。<br>在View上封装一层接口，通过接口来链接Presenter，使View和Model之间没有耦合。</p><hr><h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><p>MVVM架构：Model-View-ViewModel，是对MVP的一个优化，采用了双向绑定：View的变动，自动反映在ViewModel，反之亦然。</p><p>MVC到MVP简单说，就是增加了一层接口，降低了一层耦合。<br>那么同样的MVP到MVVM就是再加一个接口，又降低了一层耦合。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;h2 id=&quot;MVC&quot;&gt;&lt;a href=&quot;#MVC&quot; class=&quot;headerlink&quot; title=&quot;MVC&quot;&gt;&lt;/a&gt;MVC&lt;/h2&gt;&lt;p&gt;MVC架构是最经典的三层架构，分别是Model层、View层、Controller层。其中每层的职责如下：&lt;br&gt;Mode
+      
+    
+    </summary>
+    
+      <category term="android" scheme="http://qiaopc.xyz/categories/android/"/>
+    
+    
+      <category term="android" scheme="http://qiaopc.xyz/tags/android/"/>
+    
+  </entry>
   
   <entry>
     <title>【Android】事件拦截机制细节</title>
